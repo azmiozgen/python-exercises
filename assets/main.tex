@@ -22,6 +22,7 @@
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% BEGINNER 1
 \section{Beginner}
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -51,6 +52,16 @@ Define a function called \texttt{print\_n\_times}, which takes two arguments, a 
 \begin{enumerate}
     \item If \texttt{greet} is far far away, \texttt{import} it.
 \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGINNER 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{How many minutes do we have today?}
+Knowing when the day will over is always useful. Define a function called \texttt{get\_minutes\_left} that takes two integer arguments, one is the hour $0\leq \text{hour} \leq 23$ and the other is minute $0\leq \text{minute} \leq 59$. Check the boundaries with \texttt{assert}, and returns how many minutes left to the midnight?
+\par
+How many minutes left to the next day if the clock is 00.00?
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -176,6 +187,50 @@ inputs are integers, so there is no need to include any error checking in your f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\subsection{Rohan had come at last}
+\textit{In rode the Lord of the Nazgûl. \\
+A great black shape against the fires beyond he loomed up, grown to a vast menace of despair. \\
+In rode the Lord of the Nazgûl, under the archway that no enemy ever yet had passed, and all fled before his face. \\
+All save one. There waiting, silent and still in the space before the Gate, sat Gandalf upon Shadowfax: \\
+Shadowfax who alone among the free horses of the earth endured the terror, \\
+unmoving, steadfast as a graven image in Rath Dínen. \\
+"You cannot enter here," said Gandalf, and the huge shadow halted. \\
+"Go back to the abyss prepared for you! Go back! Fall into the nothingness that awaits you and your Master. Go!" \\
+The Black Rider flung back his hood, and behold! he had a kingly crown; and yet upon no head visible was it set. \\
+The red fires shone between it and the mantled shoulders vast and dark. \\
+From a mouth unseen there came a deadly laughter. "Old fool!" he said. \\
+"Old fool! This is my hour. Do you not know Death when you see it? Die now and curse in vain!" \\ And with that he lifted high his sword and flames ran down the blade. \\
+And in that very moment, away behind in some courtyard of the city, a cock crowed. \\
+Shrill and clear he crowed, recking nothing of war nor of wizardry, \\
+welcoming only the morning that in the sky far above the shadows of death was coming with the dawn. \\
+And as if in answer there came from far away another note. \\
+Horns, horns, horns, in dark Mindolluin's sides they dimly echoed. \\
+Great horns of the north wildly blowing. Rohan had come at last.}
+
+\subsubsection{Counting 'is' good}
+An \textbf{n-gram} is a sequence of items from a given sample of text. For a unigram, $n$ is equal to $1$. For a bigram $n$ is equal to 2. An n-gram can be at character level as well as word level. We will look at word level n-grams here.
+\par
+Extract the word-level unigram for the text above. Clean all punctuation, lowercase the words, and collect all the words.
+\par
+Count all the words. What is the count of word \textit{'is'}?
+
+\textbf{Hints:}
+\begin{enumerate}
+    \item \texttt{string.punctuation}
+    \item \texttt{collections.Counter}
+\end{enumerate}
+
+\subsubsection{Oh my Lord}
+Extract the word-level bigram of the text, namely, the list of each two adjacent words.
+\par
+Count all the pairs. What is the count of the phrase \textit{'the lord'}?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTERMEDIATE 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \subsection{B$e$hold, $e$ul$e$r!}
 % ---------------------------------------------
 
@@ -194,7 +249,7 @@ But earlier (18th century), Bernoulli defined the compound interest problem
 
 Suppose you have a money in the bank. And the bank compounds the money annually. Equation \ref{compound} gives the increase rate of money if $100\%$ interest is compounded in one year where $x$ defines the number of the time that interest is applied. If $x=1$, $100\%$ interest is applied only at the end of the year. Then total rate becomes $2$, namely money is doubled. If $x=2$, $50\%$ interest is applied twice through one year. In this case, total rate becomes $2.25$. What happens when $x \to \infty$ as in the Equation \ref{compound}? This is where Euler comes in. He calculated this converging sum and ended up an irrational number $e=2.718281...$
 
-\subsubsection{Comput$e$ $\lim_{x \to \infty}(1 + \frac{1}{x})^x$ ul$e$r}
+\subsubsection{Comput$e$ $\lim_{x \to \infty} {1 + \frac{1}{x}}^x$ ul$e$r}
 Define a function called \texttt{euler\_limit} that takes number $n$ and approximates Equation \ref{compound}. You may assume that the input to your function will be a positive integer.
 
 \subsubsection{Comput$e$ $\sum_{k=0}^{\infty}\frac{1}{k!}$ ul$e$r}
